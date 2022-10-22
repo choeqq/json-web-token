@@ -2,7 +2,7 @@ export interface DecodeInput {
   token: string;
 }
 
-function decode({ token }: DecodeInput) {
+function decoded({ token }: DecodeInput) {
   const parts = token.split('.');
 
   if (parts.length !== 3) {
@@ -14,4 +14,4 @@ function decode({ token }: DecodeInput) {
   return JSON.parse(atob(payload));
 }
 
-export default decode;
+export default decoded;
